@@ -1,0 +1,14 @@
+.tabs a {
+  color: #6600cc;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tabs .active {
+  color: #6600cc;
+  background-color: #c8b6ff !important;
+}
+
+container {
+  overflow-y: scroll;
+}

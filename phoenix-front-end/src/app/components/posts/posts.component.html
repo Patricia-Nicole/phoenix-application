@@ -1,0 +1,68 @@
+<ul class="collection col s12 m12 l10" *ngFor="let post of posts">
+    <li class="collection-item avatar">
+        <img src="https://res.cloudinary.com/doztrdady/image/upload/v{{post.picVersion}}/{{post.picId}}" alt="" class="circle">
+        <span class="title">{{post.username}}</span>
+        <!--user from payload from ts file(logged in)
+        if the username of the post is the same as the user that is logged in-->
+        <!--modal is used for when a user is opening smth on the page
+        search https://materializecss.com/modals.html-->
+        <span data-target="modal" class="title secondary-content modal-trigger" *ngIf="post.username === user.username" (click)="OpenEditModal(post)"> 
+            Edit
+        </span>
+        <br>
+        <p class="time">{{TimeFromNow(post.created)}}
+        <br> @{{post.city}}, {{post.country}}
+        </p>
+    </li>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <!--Show images with posts, just if they exist in the post-->
+                <div class="card-image" *ngIf="post.imgId">
+                    <img class="postImage" src="https://res.cloudinary.com/doztrdady/image/upload/v{{post.imgVersion}}/{{post.imgId}}">
+                </div>
+                <div class="card-content">
+                    <p>{{post.post}}</p>
+                </div>
+                <div class="card-action">
+                    <!--if username does not exists in the likes array
+                        we add the class notLiked
+                    otherwise we add the class liked-->
+                    <i (click)="LikePost(post)" [ngClass]="(!CheckInLikesArray(post.likes, user.username)) ? 'notLiked' : 'liked'" class="material-icons">thumb_up</i>
+                    <span class="iconSpan">
+                        {{post.totalLikes}}
+                    </span>
+                    <i class="material-icons" [ngClass]="(!CheckInLikesArray(post.comments, user.username)) ? 'notLiked' : 'liked'" (click)="OpenCommentBox(post)">chat</i>
+                    <span class="iconSpan">
+                        {{post.comments.length}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ul>
+
+
+<!--https://materializecss.com/modals.html-->
+<div class="container">
+    <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <h4>
+            <button align="right" class="button" (click)="CloseModal()">Close</button>
+            Edit Post
+            <button class="secondary-content deleteBtn btn" (click)="DeletePost()">
+                Delete
+            </button>
+        </h4>
+        <!--if the post value is available, display the initial post-->
+        <p *ngIf="postValue">{{postValue.post}}</p>
+        <form [formGroup]="editForm" novalidate>
+            <textarea formControlName="editedPost" class="materialize-textarea"></textarea>
+            <div class="modal-footer">
+                <button class="btn" (click)="SubmitEditedPost()">Save</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

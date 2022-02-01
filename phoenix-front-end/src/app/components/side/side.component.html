@@ -1,0 +1,139 @@
+<ul id="slide-out" class="sidenav sidenav-fixed">
+
+    <a (click)="GoToHome()" class="brand-logo"><img src="../../../assets/img/logo/nameLogo.png"></a>
+
+    <li><div class="divider"></div></li>
+
+    <div class="row" *ngIf="userData">
+        <div *ngIf="userData" class="col s12 m4">
+            <a [routerLink]="['', userData.username]">
+                <span>Posts</span>
+                <p class="num" *ngIf="userData">{{userData.posts.length}}</p>
+                <p class="num" *ngIf="!userData">0</p>
+            </a>
+        </div>
+        <div class="col s12 m4" [routerLinkActive]="['']" [routerLinkActiveOptions]="{exact: true}">
+            <a [routerLink]="['/people', 'following']">
+                <span>Following</span>
+                <p class="num" *ngIf="userData">{{userData.following.length}}</p>
+                <p class="num" *ngIf="!userData">0</p>
+            </a>
+        </div>
+        <div class="col s12 m4" [routerLinkActive]="['']" [routerLinkActiveOptions]="{exact: true}">
+            <a [routerLink]="['/people', 'followers']">
+                <span>Followers</span>
+                <p class="num" *ngIf="userData">{{userData.followers.length}}</p>
+                <p class="num" *ngIf="!userData">0</p>
+            </a>
+        </div>
+    </div>
+    
+    <!--Person Icon-->
+    <li><div class="divider"></div></li>
+    <li> 
+        <div class="button-drop">
+        <!-- Dropdown Structure -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a class="link-color" [routerLink]="['/login']">SignUp</a></li>
+            <li class="divider"></li>
+            <li><a class="link-color" (click)="logout()">SignOut</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <ul class="right hide-on-med-and-down">
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"><i class="material-icons">person</i></a></li>
+                </ul>
+            </div>
+         </nav>
+         </div>
+    </li>
+    <!-- End of Person Icon-->
+    <li><div class="divider"></div></li>
+    <li>
+        <ul class="collection with-header">
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/streams']">
+                    <div class="text">
+                        Streams
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">apps</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/people']">
+                    <div class="text">
+                        People
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">people</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/people', 'following']">
+                    <div class="text">
+                        Following
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">person_add</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/people', 'followers']">
+                    <div class="text">
+                        Followers
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">person_pin</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/images', user.username]">
+                  <div class="text">
+                    Photos
+                    <a href="#!" class="secondary-content">
+                      <i class="material-icons">photo_library</i>
+                    </a>
+                  </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/notifications']">
+                    <div class="text">
+                        Notifications
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">notifications</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/account', 'password']">
+                    <div class="text">
+                        ChangePassword
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">lock</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            <li class="collection-item">
+                <a [routerLink]="['/']">
+                    <div class="text">
+                        Phoenix Page
+                        <a href="#!" class="secondary-content">
+                            <i class="material-icons">bubble_chart</i>
+                        </a>
+                    </div>
+                </a>
+            </li>
+        </ul>  
+    </li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+

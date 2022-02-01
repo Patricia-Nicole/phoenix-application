@@ -1,0 +1,66 @@
+#tm-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1000;
+}
+
+.bodyDiv {
+  background: url('../../../assets/img/myprofile/bg.mp4') !important;
+  width: 100vw;
+  height: 100%;
+  border-radius: 5px;
+}
+
+div.bodyContainer {
+  margin-top: 50px !important;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(34, 43, 207, 0.397) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: #3d0099;
+  height: 900px !important;
+}
+
+.tabs {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px #f4f4f5, 0 0 25px #9999ff, 0 0 5px #f2e6ff;
+  background: #6600cc !important;
+}
+
+.tabs a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tabs .active {
+  color: #6600cc;
+  background-color: #c8b6ff !important;
+}
+
+.auth-content {
+  height: 750px !important;
+  background: #c8b6ff !important;
+}
+
+/* =========================================
+                Footer
+============================================ */
+footer {
+  background: #000f4b;
+  padding: 30px;
+}
+
+footer p {
+  color: #fff;
+  line-height: 20px;
+  margin: 0;
+}
+
+footer p span {
+  color: #f4c613;
+}

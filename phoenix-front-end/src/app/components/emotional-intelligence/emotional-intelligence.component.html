@@ -1,0 +1,109 @@
+<body>
+<div class="grid-container">
+    <div class="header">
+    <!-- Header -->
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+              <div class="nav-wrapper">
+                <!-- Dropdown Structure -->
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a class="link-color" [routerLink]="['/streams']">Profile</a></li>
+                    <li><a class="link-color" [routerLink]="['/login']">SignIn</a></li>
+                    <li><a class="link-color" [routerLink]="['/login']">SignUp</a></li>
+                    <li class="divider"></li>
+                    <li><a class="link-color" (click)="logout()">SignOut</a></li>
+                </ul>
+                <nav>
+                    <div class="nav-wrapper">
+                        <a class="brand-logo"><img src="../../../assets/img/logo/nameLogo.png"></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a class="link-color" [routerLink]="['/blog']"><i class="material-icons">arrow_back</i></a></li>
+                            <li><a class="link-color" [routerLink]="['/']"><i class="material-icons">bubble_chart</i></a></li>
+                            <li>
+                                <!-- Dropdown Structure -->
+                                <ul id="dropdown1" class="dropdown-content">
+                                    <li><a class="link-color" [routerLink]="['/streams']">Profile</a></li>
+                                    <li><a class="link-color" [routerLink]="['/login']">SignIn</a></li>
+                                    <li><a class="link-color" [routerLink]="['/login']">SignUp</a></li>
+                                    <li class="divider"></li>
+                                    <li><a class="link-color" (click)="logout()">SignOut</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdown Trigger -->
+                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">person</i></a></li>
+                        </ul>
+                    </div>
+                 </nav>
+              </div>
+            </nav>
+          </div>
+    </header>
+    <!-- Header Ends -->
+    <br>
+    <div class="glass">
+        <div id="homeBlog-heading wow slideInLeft">
+            <img src="../../../assets/img/blog/EmotionalIntelligence/emotionalIntelligence.svg" width="700px">
+        </div>
+    </div> 
+    <br>
+    </div>
+  
+    <div class="left" style="background: #480091;">
+        <div class="glass" style="padding-left: 20px; padding-top: 20px;">
+            <img src="../../../assets/img/home/me.jpg" alt="Avatar" style="width:150px; border-radius: 50%;">
+            <p style="font-size: 20px; font-weight: 700;">Patricia-Nicole Gal</p>
+            <div class="office">
+                <ul class="office-details">
+                    <li><i class="fa fa-envelope"></i><span>phoenix.pwebsite@gmail.com</span></li>
+                    <br><li><i class="fa fa-youtube"></i><span>YouTube Channel</span></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="middle" style="background-color:#480091;">
+        <embed src="../../../assets/img/blog/EmotionalIntelligence/EmotionalIntelligence.pdf" width="100%" height="900" type="application/pdf">
+    </div>  
+    
+  
+    <!-- Footer  -->
+    <div class="footer">
+        <footer class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Copyright &copy; 2021 All Rights Reserved By <span>Patricia-Nicole Gal</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer Ends -->
+</div>
+<!--jQuery library-->
+<script src="../../../assets/js/jquery.js"></script>
+<!--Boostrap library - after jQuery-->
+<script src="../../../assets/js/bootstrap/bootstrap.js"></script>
+<!--OWL Carousel JS-->
+<script src="../../../assets/js/owl-carousel/owl.carousel.min.js"></script>
+<!--Waypoints -- to animate at scrolling-->
+<script src="../../../assets/js/waypoints/jquery.waypoints.min.js"></script>
+<!--Responsive Tabs-->
+<script src="../../../assets/js/responsive-tabs/jquery.responsiveTabs.min.js"></script>
+<!--Isotope for filtering the data in the portofolio-->
+<script src="../../../assets/js/filter-isotope/isotope.pkgd.min.js"></script>
+<!--Magnific Popup -> for zoom images-->
+<script src="../../../assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!--Counter-->
+<script src="../../../assets/js/counter/jquery.counterup.min.js"></script>
+<!--Easing for Smooth Scrolling-->
+<script src="../../../assets/js/easy/jquery.easing.1.3.js"></script>
+<!--Wow Js-->
+<script src="../../../assets/js/wow/wow.min.js"></script>
+<!--Custom JS - after jQuery-->
+<script src="../../../assets/js/script.js"></script>
+
+</body>

@@ -1,0 +1,52 @@
+<!--Toolbar component-->
+<app-toolbar></app-toolbar>
+
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <!--On a small device the length will take grid size of 12
+        On a medium device it will have the size of 4
+        On large devices it will be 3 -->
+        <!--Left-Side part of the window-->
+        <div class="col s12 m4 l3">
+            <app-side></app-side>
+        </div>
+        <!--Right-Side part of the window-->
+        <div class="col s12 m8 l9">
+            <div class="col s12 m10">
+                <!--This row will display the original post of the user-->
+                <div class="row">
+                    <div class="card">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <span class="post">{{post}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card postDiv">
+                        <div class="card-content">
+                            <form [formGroup]="commmentForm" (ngSubmit)="AddComment()">
+                                <div class="formDiv">
+                                    <textarea formControlName="comment" class="materialize-textarea"></textarea>
+                                    <button class="btn postBtn" [disabled]="!commmentForm.valid">
+                                        Add Comment
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Display the comments from the other users-->
+        <ul class="collection col s12 m8 l9" *ngFor="let comment of commentsArray">
+            <li class="collection-item avatar">
+                <img class="circle" src="https://res.cloudinary.com/doztrdady/image/upload/v{{comment.picVersion}}/{{comment.picId}}">
+                <span class="title">{{comment.username}}</span>
+                <p class="time">{{TimeFromNow(comment.createdAt)}}</p>
+                <p class="postComment">{{comment.comment}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

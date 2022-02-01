@@ -1,0 +1,99 @@
+button {
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 29px;
+  background: #bfa2dd;
+  box-shadow: 26px 26px 51px #917ba8, -26px -26px 51px #edc9ff;
+  font-family: 'Work Sans', sans-serif;
+  background: rgba(206, 146, 238, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+button:hover {
+  background: linear-gradient(to bottom, #ccccff 0%, #00ffff 100%);
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  min-width: 940px;
+}
+body {
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1em;
+  color: #858585;
+}
+
+input,
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  vertical-align: middle;
+  font-weight: normal;
+}
+fieldset {
+  border: 0;
+}
+
+a {
+  color: #e1e1e1;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.line-hor {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 918px;
+  height: 8px;
+  margin-left: 11px;
+  background: url(../../../assets/img/movie-book-music/line-hor.gif) repeat-x left top;
+  z-index: 1;
+  position: relative;
+}
+.box {
+  background: rgb(137, 74, 209);
+  width: 100%;
+  margin-top: -3px;
+}
+.box .border-left {
+  background: url(../../../assets/img/movie-book-music/border-left.gif) repeat-y left top;
+}
+.box .border-right {
+  background: url(../../../assets/img/movie-book-music/border-right.gif) repeat-y right top;
+}
+.box .inner {
+  padding: 28px 50px 25px 50px;
+}
+
+#content .content {
+  padding: 30px 0 39px 50px;
+}
+
+a {
+  outline: none;
+}

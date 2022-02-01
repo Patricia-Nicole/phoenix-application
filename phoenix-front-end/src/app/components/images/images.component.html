@@ -1,0 +1,49 @@
+<!--Toolbar component-->
+<app-toolbar></app-toolbar>
+
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <!--On a small device the length will take grid size of 12
+        On a medium device it will have the size of 4
+        On large devices it will be 3 -->
+        <!--Left-Side part of the window-->
+        <div class="col s12 m4 l3">
+            <app-side></app-side>
+        </div>
+        <!--Right-Side part of the window-->
+        <div class="col s12 m8 l9">
+            <div class="row">
+                <div class="col s6">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>File</span>
+                        <!--ng2FileSelect -> allow us to use FileSelect api
+                        bind the [uploader] -> coming from directive and
+                        set it to the uploader variable created in images.components.ts-->
+                        <!--create a method onFileSelected-->
+                        <input type="file" ng2FileSelect [uploader]="uploader" (onFileSelected)="OnFileSelected($event)">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" id="filePath" type="text">
+                      </div>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="file-field input-field">
+                      <a class="waves-effect waves-light btn" (click)="Upload()">
+                        <i class="material-icons left">image</i>Upload Image
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" *ngFor="let image of images">
+                  <div class="item-img-wrap imgDiv">
+                    <img class="imgCircle" src="https://res.cloudinary.com/doztrdady/image/upload/v{{image.imgVersion}}/{{image.imgId}}">
+                    <button class="btn imgBtn" (click)="SetProfileImage(image)">Set AS Profile</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

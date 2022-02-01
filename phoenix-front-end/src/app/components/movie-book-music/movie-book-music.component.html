@@ -1,0 +1,51 @@
+<!-- Background video -->
+<div class="tm-video-wrapper">
+    <video autoplay muted loop id="tm-video">
+        <source src="../../../assets/img/myprofile/bg.mp4" type="video/mp4">
+    </video>
+</div>
+<a class="link-color" [routerLink]="['/']"><i class="material-icons" style="color:blueviolet; font-size: 50px;">bubble_chart</i></a>
+<div class="bodyDiv card-panel">
+    <div class="container bodyContainer">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab">
+                  <a href="/movies" target="emptypage" class="active">Movies</a>
+                </li>
+                <li class="tab">
+                  <a href="/music" target="emptypage">Music</a>
+                </li>
+                <li class="tab">
+                    <a href="/books" target="emptypage">Books</a>
+                </li>
+                <li class="tab">
+                    <a href="/suggestions" target="emptypage">Suggestions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content auth-content">
+              <div id="movies">
+                <iframe name="emptypage" height="700px" width="100%" frameBorder="0"></iframe>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Footer  -->
+<footer class="text-center">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <p>
+                  Copyright &copy; 2021 All Rights Reserved By <span>Patricia-Nicole Gal</span>
+              </p>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Footer Ends -->

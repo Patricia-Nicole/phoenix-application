@@ -1,0 +1,12 @@
+Open front-end:
+
+cd phoenix-front-end
+ng serve --open
+
+Create a new component:
+ng g c components/name --module=modules/streams.module.ts
+
+Open back-end: 
+
+cd phoenix-back-end
+npm run start

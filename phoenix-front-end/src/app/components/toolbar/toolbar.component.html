@@ -1,0 +1,92 @@
+<nav class="nav-extended">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a (click)="GoToHome()" class="brand-logo"><img src="../../../assets/img/logo/nameLogo.png"></a>
+            <ul div="nav-mobile" class="right hide-on-med-and-down">
+                <li>&nbsp;&nbsp;&nbsp;</li>
+                <li><a class="link-color" [routerLink]="['/']"><i class="material-icons">bubble_chart</i></a></li>
+                <li>&nbsp;&nbsp;&nbsp;</li>
+                <li class="dropdown-button dropdown-trigger" data-target="dropdown">
+                   <!--Icon from fontAwesome, which is imported in index.html-->
+                   <i class="fa fa-globe fa-1x badge"></i>
+                   <!--notifications number-->
+                   <span class="nav-label-icon circle" *ngIf="count.length > 0">{{count.length}}</span>
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown' class='dropdown-content col s12 collection'>
+                        <li class="colloection-item avatar" *ngFor="let data of notifcations">
+                            <div class="collection col s12">
+                                <img src="https://res.cloudinary.com/doztrdady/image/upload/v{{data.senderId.picVersion}}/{{data.senderId.picId}}" alt="" class="circle">
+                                <!--If the message is read, set isRead class, otherwise unread class-->
+                                <span [ngClass]="data.read ? 'isRead' : 'unread' ">{{data.message}}</span>
+                                <p class="time">{{TimeFromNow(data.created)}}</p>
+                            </div>
+                        </li>
+                        <li *ngIf="notifcations.length <= 0">
+                            <p class="text">No Notification</p>
+                        </li>
+                        <p class="secondary-content">
+                            <a class="markAll btn" (click)="MarkAll()">Mark All As Read</a>
+                        </p>
+                    </ul>
+                </li>
+                <!--Make space between the notification icons-->
+                <li>&nbsp;&nbsp;&nbsp;</li>
+                <li class="dropdown-button dropdown-trigger1" data-target="dropdown1">
+                    <!--Icon from fontAwesome, which is imported in index.html-->
+                    <i class="fa fa-bell fa-1x badge"></i>
+                    <!--message notifications number-->
+                    <span class="nav-label-icon circle" *ngIf="msgNumber > 0">{{msgNumber}}</span>
+                     <!-- Dropdown1 Structure -> for chat notifications -->
+                     <ul id='dropdown1' class='dropdown-content col s12 collection'>
+                         <li class="colloection-item avatar" *ngFor="let chat of chatList" (click)="GoToChatPage(chat.receiverId.username)">
+                             <div class="collection col s12">
+                                <img src="https://res.cloudinary.com/doztrdady/image/upload/v{{chat.receiverId.picVersion}}/{{chat.receiverId.picId}}" alt="" class="circle">
+                                 <!--If the message is read, set isRead class, otherwise unread class-->
+                                 <span class="title">
+                                    {{chat.receiverId.username}}
+                                    <a class="secondary-content">
+                                        <!--Display last message date that the user received from someone
+                                        -> we need last value in the array-->
+                                        {{MessageDate(chat.msgId.message[chat.msgId.message.length-1].createdAt)}}
+                                    </a>
+                                </span>
+                                <p class="message-text">
+                                    <!--Display last message that the user received from someone
+                                        -> we need last value in the array-->
+                                    {{chat.msgId.message[chat.msgId.message.length-1].body}}
+                                    <a class="secondary-content" *ngIf="!chat.msgId.message[chat.msgId.message.length-1].isRead 
+                                    && chat.receiverId.username !== chat.msgId.message[chat.msgId.message.length-1].receivername"> 
+                                      <i class="material-icons">brightness_1</i>
+                                    </a>
+                                    <a class="secondary-content" *ngIf="chat.msgId.message[chat.msgId.message.length-1].isRead">
+                                      <i class="material-icons">panorama_fish_eye</i>
+                                    </a>
+                                </p>
+                             </div>
+                         </li>
+                         <li *ngIf="notifcations.length <= 0">
+                             <p class="text">No Notification</p>
+                         </li>
+                         <p class="secondary-content">
+                             <a class="markAll btn" (click)="AllMessageMark()">Mark All As Read</a>
+                         </p>
+                     </ul>
+                </li>
+                <!--Make space between the notification and logout icons-->
+                <li>&nbsp;&nbsp;&nbsp;</li>
+                <li>
+                    <!--on click the method logout() 
+                    from ts file will be called-->
+                    <a (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <div class="nav-div">
+                <img class="cirl responsive-img" src="https://res.cloudinary.com/doztrdady/image/upload/v{{imageVersion}}/{{imageId}}">
+            </div>
+            <h1 class="profile-name">{{ user.username }}</h1>
+            <!--<p class="user-text">Text</p>-->
+        </div>
+    </div>
+</nav>

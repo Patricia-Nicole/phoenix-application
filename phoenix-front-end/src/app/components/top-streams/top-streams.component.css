@@ -1,0 +1,99 @@
+.collection {
+  background: linear-gradient(to bottom, #9900cc 0%, #00ffff 100%) !important;
+}
+
+.collection-item {
+  background: linear-gradient(to top right, #66ffff 0%, #6600cc 100%) !important;
+}
+
+.card {
+  background: linear-gradient(to right, #e0ffff 0%, #e8ffff 100%) !important;
+}
+
+.button {
+  background: none !important;
+  border: none !important;
+  height: 10px;
+}
+
+.liked {
+  color: #6600cc !important;
+}
+
+.title {
+  font-weight: bold;
+  color: #64b5f6;
+}
+
+.time {
+  font-size: 14px;
+  color: #666565;
+}
+
+.iconSpan {
+  font-size: 18px;
+  line-height: 18px;
+  margin-right: 5px;
+}
+
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.postImage {
+  width: 100% !important;
+  margin: 0 auto !important;
+  left: 20px !important;
+  top: 10px !important;
+}
+
+.card-image {
+  width: 200px;
+  height: auto !important;
+}
+
+.active {
+  width: 350px !important;
+  height: 350px !important;
+  border-radius: none !important;
+  margin: -150px 0px 0px 120px !important;
+}
+
+.collection {
+  border: none !important;
+}
+
+.collection-item {
+  border: none !important;
+}
+
+.deleteBtn {
+  background: red !important;
+  border: none !important;
+  height: 40px;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 25px !important;
+  text-shadow: 1px 0px 1px #00ffff, 0px 1px 1px #eeeeee, 2px 1px 1px #00ffff, 1px 2px 1px #eeeeee, 3px 2px 1px #cccccc,
+    2px 3px 1px #eeeeee;
+  color: #000000;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.time {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 18px !important;
+  text-shadow: 1px 0px 1px #00ffff, 0px 1px 1px #eeeeee, 2px 1px 1px #00ffff, 1px 2px 1px #eeeeee, 3px 2px 1px #cccccc,
+    2px 3px 1px #eeeeee;
+  color: #000000;
+  margin: 0px !important;
+  padding: 0px !important;
+}

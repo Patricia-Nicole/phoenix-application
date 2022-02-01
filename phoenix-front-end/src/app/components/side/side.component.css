@@ -1,0 +1,61 @@
+a {
+  color: #bd7cff;
+}
+
+.active a {
+  color: #ffffff !important;
+}
+
+.active {
+  background: linear-gradient(to bottom right, #00ffff 0%, #9900cc 100%) !important;
+}
+
+.material-icons {
+  color: #6600cc;
+}
+
+.active .material-icons {
+  color: #ffffff;
+}
+
+.row span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.num {
+  margin: 0 !important;
+  color: #bd7cff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.text {
+  text-align: center !important;
+  font-weight: 700;
+  color: #6600cc;
+  text-shadow: 2px 3px 3px rgba(0, 255, 255, 1);
+}
+
+/*Sidenav*/
+.sidenav {
+  width: 32%;
+  background: linear-gradient(to bottom, #000066 0%, #660066 100%) !important;
+}
+
+.row {
+  padding-left: 50px;
+}
+
+.nav-wrapper {
+  background: linear-gradient(to top, #e38fff 0%, #00ffff 100%) !important;
+}
+
+.right:hover,
+li:hover {
+  background: linear-gradient(to top, #e38fff 0%, #00ffff 100%) !important;
+}
+
+.button-drop {
+  width: 100px;
+}

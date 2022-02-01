@@ -1,0 +1,66 @@
+.postDiv {
+  background: linear-gradient(to bottom, #9900cc 0%, #00ffff 100%) !important;
+}
+
+form {
+  background: linear-gradient(to right, #e0ffff 0%, #e8ffff 100%) !important;
+}
+
+.formDiv {
+  margin: 0px 20px 0px 20px;
+}
+
+.addImageBtn {
+  margin-bottom: 5px;
+}
+
+.postBtn {
+  margin-bottom: 5px;
+}
+
+.title {
+  font-weight: bold;
+  color: #64b5f6;
+}
+
+.time {
+  font-size: 14px;
+  color: #666565;
+}
+
+.postComment {
+  font-size: 15px;
+}
+
+.collection {
+  background: linear-gradient(to bottom, #9900cc 0%, #00ffff 100%) !important;
+}
+
+.collection-item {
+  background: linear-gradient(to right, #e0ffff 0%, #e8ffff 100%) !important;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 29px;
+  background: #bfa2dd;
+  box-shadow: 26px 26px 51px #917ba8, -26px -26px 51px #edc9ff;
+  font-family: 'Work Sans', sans-serif;
+  background: rgba(206, 146, 238, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #ccccff 0%, #00ffff 100%);
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
