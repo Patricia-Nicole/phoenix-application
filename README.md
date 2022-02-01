@@ -1,4 +1,17 @@
 # phoenix-application
+## About
+### This website is a start-up and it is not entirely implemented. 
+### You can make an account, follow other users, chat with them and post pictures
+### You can read blogs, find out tips about programming, school, organization, movies and books
+## Instructions:
+### When connecting to the Database (hosted by MongoDB) you will need to create a file having the path "../config/secret.js" in which you will need to add the url and secret. 
+### Follow the following steps to run the two servers:
+#### Open front-end: 
+cd phoenix-front-end
+ng serve --open
+#### Open back-end: 
+cd phoenix-back-end
+npm run start
 ## Some pages of this application:
 ![image](https://user-images.githubusercontent.com/78255281/151894899-cbd4966c-83d7-4a1b-a26f-6dc9a00558a7.png)
 ![image](https://user-images.githubusercontent.com/78255281/151894998-39a1b08e-4197-4628-8ee5-d0279c5bc386.png)
