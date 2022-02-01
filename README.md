@@ -1,4 +1,5 @@
 # phoenix-application
+## Angular, Node.js, CSS, JavaScript, HTML, TypeScript
 ## About
 ### This website is a start-up and it is not entirely implemented. 
 ### You can make an account, follow other users, chat with them and post pictures
